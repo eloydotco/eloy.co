@@ -1,6 +1,6 @@
 import Section from "@/components/section";
-import { Box, Button, Heading, Link, Text, VStack } from "@chakra-ui/react";
-import { TwitterLogo } from "phosphor-react";
+import SocialLinks from "@/components/social-links";
+import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import PageTransition from "../components/page-transitions";
 
@@ -18,17 +18,7 @@ const Home = () => (
                 minimalism, finance, data science and more...
               </Text>
             </VStack>
-            <Link href="https://twitter.com/_ecastelo" isExternal>
-              <Button
-                colorScheme="blue"
-                rounded="xl"
-                size="lg"
-                leftIcon={<TwitterLogo weight="fill" />}
-                mt={4}
-              >
-                Follow me on Twitter
-              </Button>
-            </Link>
+            <SocialLinks />
           </VStack>
         </Section>
       </VStack>
