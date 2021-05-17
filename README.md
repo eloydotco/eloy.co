@@ -1,6 +1,6 @@
 # README
 
-This is my personal website, hosted at eloy.xyz and built with Next.js & Chakra UI components.
+This is my personal website, hosted at eloy.co and built with Next.js & Chakra UI components.
 
 # WIP
 
