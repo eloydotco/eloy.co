@@ -1,0 +1,27 @@
+{
+  "like": [
+    "Reading",
+    "Note-Taking",
+    "Smart Home",
+    "Data Science",
+    "React",
+    "Angular",
+    "Jokes",
+    "Coffee",
+    "Japanesse food",
+    "Mexican food",
+    "Minimalism",
+    "Stoicism"
+  ],
+  "dislike": [
+    "Notifications",
+    "Narrow-minded",
+    "Driving",
+    "Strong Beliefs",
+    "Advertisments",
+    "Reality TV",
+    "Group chats",
+    "Politics",
+    "News"
+  ]
+}

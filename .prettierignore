@@ -1,0 +1,6 @@
+.cache
+.github
+.lighthouseci
+.next
+node_modules
+public
