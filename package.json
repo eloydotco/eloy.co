@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "~1.6.1",
-    "@emotion/react": "~11.4.0",
+    "@emotion/react": "~11.5.0",
     "@emotion/styled": "~11.3.0",
     "@lhci/cli": "~0.8.1",
     "@next/mdx": "~10.2.0",
