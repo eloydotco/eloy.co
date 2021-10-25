@@ -36,6 +36,7 @@ const ThemeToggle = ({ mobile }) => {
           spacing={0}
           rounded="md"
           px={6}
+          // eslint-disable-next-line react-hooks/rules-of-hooks
           color={useColorModeValue('blue.600', 'blue.200')}
           onClick={handleClick}
         >

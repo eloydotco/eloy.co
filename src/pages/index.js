@@ -10,11 +10,12 @@ const Home = () => (
       <VStack spacing={12}>
         <Section>
           <VStack spacing={4} align="start" fontSize="2xl">
-            <Heading size="xl">Hey, I'm Eloy 👋</Heading>
+            <Heading size="xl">Hey, I&apos;m Eloy 👋</Heading>
             <VStack>
               <Text>
-                I'm an almost-successful entrepreneur. Passionate of new technologies and software
-                engineering. Learning about stoicism, minimalism, finance, data science and more...
+                I&apos;m an almost-successful entrepreneur. Passionate of new technologies and
+                software engineering. Learning about stoicism, minimalism, finance, data science and
+                more...
               </Text>
             </VStack>
             <SocialLinks />

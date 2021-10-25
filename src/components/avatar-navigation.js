@@ -4,7 +4,7 @@ import React from 'react';
 
 const AvatarNavigation = () => {
   return (
-    <Link href="/">
+    <Link href="/" passHref>
       <Avatar name="Eloy Castelo" size="md" src="/avatar.jpg" cursor="pointer" />
     </Link>
   );
