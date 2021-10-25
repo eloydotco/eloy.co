@@ -1,9 +1,9 @@
-import { Button, Link, Stack } from "@chakra-ui/react";
-import { GithubLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
+import { Button, Link, Stack } from '@chakra-ui/react';
+import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
 
 const SocialLinks = () => {
   return (
-    <Stack direction={["column", "row"]} align="stretch" spacing={[0, 4]}>
+    <Stack direction={['column', 'row']} align="stretch" spacing={[0, 4]}>
       <Link href="https://twitter.com/thoughts_by_eco" isExternal>
         <Button
           colorScheme="blue"

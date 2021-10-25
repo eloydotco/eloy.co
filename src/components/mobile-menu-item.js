@@ -1,34 +1,34 @@
-import { Button, useColorModeValue } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+import { Button, useColorModeValue } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const variants = {
   open: {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 }
-    }
+      y: { stiffness: 1000, velocity: -100 },
+    },
   },
   closed: {
     y: 20,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 }
-    }
-  }
+      y: { stiffness: 1000 },
+    },
+  },
 };
 
 const MotionButton = motion(Button);
 
 function MobileMenuItem({ href, title, toggle }) {
-  var isActive = false;
+  let isActive = false;
   const { pathname } = useRouter();
 
-  if (href !== "/") {
-    const [, group] = href.split("/");
+  if (href !== '/') {
+    const [, group] = href.split('/');
 
     isActive = pathname.includes(group);
   } else {
@@ -41,11 +41,11 @@ function MobileMenuItem({ href, title, toggle }) {
     <Link href={href}>
       <MotionButton
         size="lg"
-        aria-current={isActive ? "page" : undefined}
+        aria-current={isActive ? 'page' : undefined}
         w="100%"
         variants={variants}
         _activeLink={{
-          color: useColorModeValue("blue.500", "blue.200")
+          color: useColorModeValue('blue.500', 'blue.200'),
         }}
       >
         {title}

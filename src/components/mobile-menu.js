@@ -8,11 +8,11 @@ import {
   DrawerOverlay,
   useColorModeValue,
   useDisclosure,
-  VStack
-} from "@chakra-ui/react";
-import { Menu } from "heroicons-react";
-import React from "react";
-import MobileMenuItem from "./mobile-menu-item";
+  VStack,
+} from '@chakra-ui/react';
+import { Menu } from 'heroicons-react';
+import React from 'react';
+import MobileMenuItem from './mobile-menu-item';
 
 const MobileMenu = ({}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,17 +25,12 @@ const MobileMenu = ({}) => {
         spacing={0}
         rounded="md"
         px={6}
-        color={useColorModeValue("blue.600", "blue.200")}
+        color={useColorModeValue('blue.600', 'blue.200')}
         onClick={onOpen}
       >
         {<Menu size="32" />}
       </VStack>
-      <Drawer
-        isOpen={isOpen}
-        placement="bottom"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+      <Drawer isOpen={isOpen} placement="bottom" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay>
           <DrawerContent borderTopRadius="6px">
             <DrawerCloseButton />

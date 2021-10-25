@@ -1,8 +1,8 @@
-import Section from "@/components/section";
-import SocialLinks from "@/components/social-links";
-import { Box, Heading, Text, VStack } from "@chakra-ui/react";
-import React from "react";
-import PageTransition from "../components/page-transitions";
+import PageTransition from '@/components/page-transitions';
+import Section from '@/components/section';
+import SocialLinks from '@/components/social-links';
+import { Box, Heading, Text, VStack } from '@chakra-ui/react';
+import React from 'react';
 
 const Home = () => (
   <Box>
@@ -13,9 +13,8 @@ const Home = () => (
             <Heading size="xl">Hey, I'm Eloy 👋</Heading>
             <VStack>
               <Text>
-                I'm an almost-successful entrepreneur. Passionate of new
-                technologies and software engineering. Learning about stoicism,
-                minimalism, finance, data science and more...
+                I'm an almost-successful entrepreneur. Passionate of new technologies and software
+                engineering. Learning about stoicism, minimalism, finance, data science and more...
               </Text>
             </VStack>
             <SocialLinks />
@@ -31,9 +30,9 @@ export function getStaticProps() {
 
   return {
     props: {
-      projects
+      projects,
     },
-    revalidate: 600
+    revalidate: 600,
   };
 }
 

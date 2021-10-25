@@ -10,9 +10,9 @@
       "src":"/favicons/android-chrome-512x512.png",
       "sizes":"512x512",
       "type":"image/png"
-      }
-    ],
-    "theme_color":"#3182CE",
-    "background_color":"#ffffff",
-      "display":"standalone"
     }
+  ],
+  "theme_color":"#3182CE",
+  "background_color":"#ffffff",
+    "display":"standalone"
+  }
