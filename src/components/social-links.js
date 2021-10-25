@@ -1,10 +1,10 @@
-import { Button, Link, Stack } from "@chakra-ui/react";
-import { GithubLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
+import { Button, Link, Stack } from '@chakra-ui/react';
+import { GithubLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react';
 
 const SocialLinks = () => {
   return (
-    <Stack direction={["column", "row"]} align="stretch" spacing={[0, 4]}>
-      <Link href="https://twitter.com/_ecastelo" isExternal>
+    <Stack direction={['column', 'row']} align="stretch" spacing={[0, 4]}>
+      <Link href="https://twitter.com/thoughts_by_eco" isExternal>
         <Button
           colorScheme="blue"
           rounded="xl"
@@ -26,7 +26,7 @@ const SocialLinks = () => {
           Linkedin
         </Button>
       </Link>
-      <Link href="https://github.com/eloycastelo/" isExternal>
+      <Link href="https://github.com/codes-by-eco/" isExternal>
         <Button
           colorScheme="blue"
           rounded="xl"

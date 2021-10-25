@@ -1,7 +1,7 @@
-import Container from "@/components/container";
-import { Center, Heading, Text, VStack } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
-import Link from "next/link";
+import Container from '@/components/container';
+import { Center, Heading, Text, VStack } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -11,8 +11,8 @@ export default function NotFound() {
           title="404 – Eloy Castelo"
           canonical="https://eloy.co/404"
           openGraph={{
-            url: "https://eloy.co/404",
-            title: "404 – Eloy Castelo"
+            url: 'https://eloy.co/404',
+            title: '404 – Eloy Castelo',
           }}
         />
         <VStack>

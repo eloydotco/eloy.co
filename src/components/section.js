@@ -1,6 +1,6 @@
-import { Center } from "@chakra-ui/react";
-import React from "react";
-import Container from "./container";
+import { Center } from '@chakra-ui/react';
+import React from 'react';
+import Container from './container';
 
 const Section = (props) => {
   const { full, children, ...rest } = props;

@@ -4,31 +4,31 @@ import {
   Tooltip,
   useColorMode,
   useColorModeValue,
-  VStack
-} from "@chakra-ui/react";
-import { MoonOutline, SunOutline } from "heroicons-react";
-import React from "react";
-import useSound from "use-sound";
+  VStack,
+} from '@chakra-ui/react';
+import { MoonOutline, SunOutline } from 'heroicons-react';
+import React from 'react';
+import useSound from 'use-sound';
 
 const ThemeToggle = ({ mobile }) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [play] = useSound("/lightswitch.mp3", {
+  const [play] = useSound('/lightswitch.mp3', {
     volume: 0.05,
     sprite: {
       on: [0, 300],
-      off: [500, 300]
-    }
+      off: [500, 300],
+    },
   });
 
   const handleClick = () => {
     toggleColorMode();
-    colorMode === "dark" ? play({ id: "on" }) : play({ id: "off" });
+    colorMode === 'dark' ? play({ id: 'on' }) : play({ id: 'off' });
   };
 
   return (
     <Tooltip
-      label={colorMode === "dark" ? "Light mode" : "Dark mode"}
-      aria-label={colorMode === "dark" ? "Use light mode" : "Use dark mode"}
+      label={colorMode === 'dark' ? 'Light mode' : 'Dark mode'}
+      aria-label={colorMode === 'dark' ? 'Use light mode' : 'Use dark mode'}
     >
       {mobile ? (
         <VStack
@@ -36,10 +36,11 @@ const ThemeToggle = ({ mobile }) => {
           spacing={0}
           rounded="md"
           px={6}
-          color={useColorModeValue("blue.600", "blue.200")}
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          color={useColorModeValue('blue.600', 'blue.200')}
           onClick={handleClick}
         >
-          {colorMode === "dark" ? (
+          {colorMode === 'dark' ? (
             <ScaleFade in>
               <SunOutline size="32" />
             </ScaleFade>
@@ -54,7 +55,7 @@ const ThemeToggle = ({ mobile }) => {
           isRound
           aria-label="Switch theme"
           icon={
-            colorMode === "dark" ? (
+            colorMode === 'dark' ? (
               <ScaleFade in>
                 <SunOutline size="20" />
               </ScaleFade>
