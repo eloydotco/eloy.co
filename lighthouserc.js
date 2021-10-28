@@ -1,5 +1,7 @@
 module.exports = {
-  assert: {
-    preset: 'lighthouse:recommended',
+  ci: {
+    upload: {
+      target: 'temporary-public-storage',
+    },
   },
 };
