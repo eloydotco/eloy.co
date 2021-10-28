@@ -7,6 +7,7 @@ This is my personal website, hosted at eloy.co and built with Next.js & Chakra U
 Currently it's in progress so there are some missing parts or not fully working. Next steps:
 
 - Enhance /about -> /me
+- Build /dots
 - Build /projects
 - Build /work
 - Build /tools

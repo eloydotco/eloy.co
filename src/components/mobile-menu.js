@@ -14,7 +14,7 @@ import { Menu } from 'heroicons-react';
 import React from 'react';
 import MobileMenuItem from './mobile-menu-item';
 
-const MobileMenu = ({}) => {
+const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
