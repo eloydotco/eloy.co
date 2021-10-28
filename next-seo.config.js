@@ -13,8 +13,8 @@ const SEO = {
     description,
   },
   twitter: {
-    handle: '@thoughts_by_eco',
-    site: '@thoughts_by_eco',
+    handle: '@echos_thoughts',
+    site: '@echos_thoughts',
     cardType: 'summary_large_image',
   },
 };
