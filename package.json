@@ -21,7 +21,7 @@
     "heroicons-react": "~1.4.1",
     "mdx-prism": "~0.3.4",
     "next-mdx-enhanced": "~5.0.0",
-    "next-mdx-remote": "~3.0.6",
+    "next-mdx-remote": "~3.0.7",
     "next-plausible": "~3.0.0",
     "next-seo": "~4.28.1",
     "next": "~11.1.2",
