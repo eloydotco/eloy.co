@@ -1,0 +1,24 @@
+---
+export interface Props {
+  post: {
+    date: string;
+    description: string;
+    link: string;
+    title: string;
+  };
+}
+
+const { title, description, date, link } =
+  Astro.props.post;
+---
+
+<a
+  class="flex flex-col max-w-xs shadow-md shadow-amber-700/50 ring-1 ring-amber-400 hover:shadow-lg hover:shadow-amber-700/50 transition-all animate-zoom-in"
+  href={link}
+>
+  <div class="p-4 md:p-8 flex flex-col flex-1">
+    <h2 class="mb-4 text-xl font-bold">{title}</h2>
+    <p class="mb-8 flex-1">{description}</p>
+    <span class="self-end text-sm opacity-80">{date}</span>
+  </div>
+</a>

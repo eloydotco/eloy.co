@@ -1,0 +1,11 @@
+{
+  "root": "libs/home",
+  "sourceRoot": "libs/home",
+  "projectType": "library",
+  "targets": {
+    "check": {
+      "executor": "@nxtensions/astro:check"
+    }
+  },
+  "tags": []
+}

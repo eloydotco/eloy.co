@@ -1,6 +1,8 @@
-.cache
+# Add files here to ignore them from prettier formatting
 .github
 .lighthouseci
-.next
-node_modules
-public
+.vscode
+
+/coverage
+/dist
+/node_modules
