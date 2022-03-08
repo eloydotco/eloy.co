@@ -30,7 +30,7 @@ module.exports = {
       },
       animation: {
         'slide-in-left': 'slide-in-left 300ms ease-in-out',
-        'zoom-in': 'zoom-in 192ms ease-in-out',
+        'zoom-in': 'zoom-in 200ms ease-in-out',
         'zoom-in-slow': 'zoom-in 300ms ease-in-out',
       },
       listStyleType: {

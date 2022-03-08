@@ -16,9 +16,9 @@
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@eco/dots": ["./libs/dots/src/index.js"],
+      "@eco/dots": ["libs/dots/src/index.js"],
       "@eco/common": ["libs/common/src/index.js"],
-      "@eco/home": ["./libs/home/src/index.ts"]
+      "@eco/home": ["libs/home/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
