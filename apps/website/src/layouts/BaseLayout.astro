@@ -6,10 +6,7 @@ export interface Props {
   description: string;
 }
 
-const {
-  title: pageTitle,
-  description,
-} = Astro.props;
+const { title: pageTitle, description } = Astro.props;
 const { canonicalURL } = Astro.request;
 const siteName = canonicalURL.hostname;
 const title = `${pageTitle} | ${siteName}`;
@@ -17,16 +14,11 @@ const title = `${pageTitle} | ${siteName}`;
 
 <html lang="en" class="scroll-smooth">
   <head>
-    <Head
-      {title}
-      {description}
-      {canonicalURL}
-      {siteName}
-    />
+    <Head {title} {description} {canonicalURL} {siteName} />
   </head>
 
   <body
-    class="min-h-screen w-screen bg-white flex flex-col font-mono selection:bg-amber-100 selection:text-white overflow-x-hidden"
+    class="prose prose-invert min-h-screen w-screen max-w-full flex flex-col bg-neutral-900 selection:bg-yellow-800  overflow-x-hidden"
   >
     <Header currentPage={Astro.request.url.pathname} />
 

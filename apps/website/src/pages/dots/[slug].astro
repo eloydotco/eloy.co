@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/DotPostLayout.astro';
+import Layout from '../../layouts/BaseLayout.astro';
 import { DotPost } from '@eco/dots';
 
 export function getStaticPaths({ rss }) {
@@ -13,8 +13,7 @@ export function getStaticPaths({ rss }) {
   rss({
     title: `Eloy's dots`,
     stylesheet: true,
-    description:
-      'My blog with personal recommendations about whatever I found interesting',
+    description: 'My blog with personal recommendations about whatever I found interesting',
     items: posts.map((post) => ({
       title: post.title,
       description: post.description,
@@ -31,9 +30,7 @@ export function getStaticPaths({ rss }) {
 
 const { Content, title, description, date, canonicalUrl } = Astro.props.post;
 
-const originalUrl = !canonicalUrl?.startsWith(Astro.site.href)
-  ? canonicalUrl
-  : undefined;
+const originalUrl = !canonicalUrl?.startsWith(Astro.site.href) ? canonicalUrl : undefined;
 ---
 
 <Layout {title} {description} {canonicalUrl} {originalUrl}>

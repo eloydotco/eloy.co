@@ -9,61 +9,24 @@ const { title, date } = Astro.props;
 ---
 
 <article
-  class="max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto px-4 py-12 sm:px-8 md:px-12 text-sm sm:text-base text-amber-900 leading-8 sm:leading-8 transition-all"
+  class="max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto p-6 sm:px-8 md:px-12 text-sm sm:text-base leading-8 sm:leading-8 transition-all"
 >
-  <section class="mb-16 text-center">
+  <section class="mb-12 text-center">
     <p class="m-0">{date}</p>
-    <h1 class="mt-4 text-2xl sm:text-4xl font-bold transition-all">{title}</h1>
+    <h1 class="mt-4 text-2xl sm:text-4xl text-yellow-900 font-bold transition-all">{title}</h1>
   </section>
 
   <main class="dot-content">
     <slot />
   </main>
 
-  <a
-    class="mt-8 inline-block underline-offset-2 text-amber-700 hover:underline"
-    href="/dots">&leftarrow; Return to all dots</a
+  <a class="mt-8 text-yellow-500 no-underline underline-offset-2 hover:underline" href="/dots"
+    >&leftarrow; Return to all dots</a
   >
 </article>
 
 <style lang="scss" global>
   .dot-content {
-    > * + * {
-      @apply mt-4;
-    }
-
-    h2 {
-      @apply mt-12 text-xl font-bold sm:text-2xl;
-    }
-
-    h3 {
-      @apply mt-6 text-base font-bold sm:text-lg;
-    }
-
-    a {
-      @apply text-amber-700 underline-offset-2 hover:underline;
-    }
-
-    :not(pre) code {
-      @apply rounded-sm bg-gray-100 px-1 italic;
-    }
-
-    blockquote {
-      @apply border-l-4 border-amber-700 bg-sky-100 pl-4 italic;
-    }
-
-    ul {
-      @apply ml-4 list-inside list-disc;
-    }
-
-    li > ul {
-      @apply list-circle ml-6;
-    }
-
-    li > ul > li > ul {
-      @apply list-square ml-6;
-    }
-
     h2,
     h3 {
       @apply flex items-center;
@@ -77,8 +40,8 @@ const { title, date } = Astro.props;
       }
     }
 
-    img {
-      @apply mx-auto my-6;
+    a {
+      @apply text-yellow-500 no-underline underline-offset-2 hover:underline;
     }
 
     .heading-link img {

@@ -8,12 +8,11 @@ export interface Props {
   };
 }
 
-const { title, description, date, link } =
-  Astro.props.post;
+const { title, description, date, link } = Astro.props.post;
 ---
 
 <a
-  class="flex flex-col max-w-xs shadow-md shadow-amber-700/50 ring-1 ring-amber-400 hover:shadow-lg hover:shadow-amber-700/50 transition-all animate-zoom-in"
+  class="flex flex-col rounded-xl max-w-xs ring-1 ring-yellow-400 hover:ring-2 transition-all animate-zoom-in"
   href={link}
 >
   <div class="p-4 md:p-8 flex flex-col flex-1">
