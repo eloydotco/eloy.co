@@ -2,7 +2,7 @@
 
 This is my personal website, hosted at eloy.co and built with Astro & Tailwind.
 
-# WIP
+## WIP
 
 Currently it's in progress so there are some missing parts or not fully working. Next steps:
 
