@@ -1,0 +1,25 @@
+---
+export interface Props {
+  currentPage: string;
+}
+
+const { currentPage: rawCurrentPage } = Astro.props;
+const currentPage = rawCurrentPage.replace(/[\/\\]+$/, '');
+const highlightDots = currentPage === '/dots';
+---
+
+<nav class="p-4 flex items-center">
+  <a class="not-prose flex p-2 items-center transition-all hover:text-yellow-400" href="/">
+    <img class="svg-icon" src="/assets/logo.svg" height="70" width="70" alt="eloy.co logo" />
+  </a>
+  <!-- TODO: uncomments on first dot -->
+  <!-- <div class="flex flex-1 justify-end items-center">
+    <a
+      class={`flex items-center hover:text-cyyellowan-400 transition-all ${
+        highlightDots ? 'underline underline-offset-2 text-yellow-400' : ''
+      }`}
+      href="/dots"
+      >Dots
+    </a>
+  </div> -->
+</nav>

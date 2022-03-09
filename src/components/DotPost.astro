@@ -1,0 +1,59 @@
+---
+export interface Props {
+  title: string;
+  date: string;
+  originalUrl: string | undefined;
+}
+
+const { title, date } = Astro.props;
+---
+
+<article
+  class="max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto p-6 sm:px-8 md:px-12 text-sm sm:text-base leading-8 sm:leading-8 transition-all"
+>
+  <section class="mb-12 text-center">
+    <p class="m-0">{date}</p>
+    <h1 class="mt-4 text-2xl sm:text-4xl text-yellow-900 font-bold transition-all">{title}</h1>
+  </section>
+
+  <main class="dot-content">
+    <slot />
+  </main>
+
+  <a class="mt-8 text-yellow-500 no-underline underline-offset-2 hover:underline" href="/dots"
+    >&leftarrow; Return to all dots</a
+  >
+</article>
+
+<style lang="scss" global>
+  .dot-content {
+    h2,
+    h3 {
+      @apply flex items-center;
+
+      &:hover a {
+        @apply opacity-100;
+      }
+
+      a {
+        @apply -ml-5 hidden pr-1 leading-4 opacity-0 transition-all hover:bg-transparent sm:block;
+      }
+    }
+
+    a {
+      @apply text-yellow-500 no-underline underline-offset-2 hover:underline;
+    }
+
+    .heading-link img {
+      @apply m-0 h-4 w-4;
+    }
+
+    .external-link-icon {
+      @apply relative top-[2px] inline-flex;
+
+      img {
+        @apply m-0 ml-[2px] h-4 w-4;
+      }
+    }
+  }
+</style>

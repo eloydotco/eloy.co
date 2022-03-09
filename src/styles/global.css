@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img.svg-icon {
+  filter: invert(87%);
+}
+
+img.svg-icon:hover {
+  filter: invert(93%) sepia(15%) saturate(6131%) hue-rotate(347deg) brightness(103%) contrast(96%);
+}
+
+.prose.prose-invert {
+  --tw-prose-invert-links: rgba(255, 255, 255, 0.87);
+  --tw-prose-invert-bold: rgba(255, 255, 255, 0.87);
+}

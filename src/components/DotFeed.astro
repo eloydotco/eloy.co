@@ -1,0 +1,35 @@
+---
+import DotPreview from './DotPreview.astro';
+
+export interface Props {
+  description: string;
+  posts: any[];
+}
+
+const { description, posts } = Astro.props;
+---
+
+<div
+  class="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-6xl mx-auto p-6 w-full flex flex-col transition-all"
+>
+  <section class="mb-8 w-full flex flex-col">
+    <p class="text-center">{description}</p>
+  </section>
+
+  <section class="grid justify-center sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-md">
+    {posts.map((post) => {
+      const link = `/dots/${post.file.pathname.split('/').pop().split('.').shift()}`;
+
+      return (
+        <DotPreview
+          post={{
+            title: post.title,
+            description: post.description,
+            date: post.date,
+            link,
+          }}
+        />
+      );
+    })}
+  </section>
+</div>

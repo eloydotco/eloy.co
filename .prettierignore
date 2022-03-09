@@ -1,6 +1,5 @@
-.cache
-.github
-.lighthouseci
-.next
-node_modules
-public
+# Add files here to ignore them from prettier formatting
+.**
+
+/dist
+/node_modules

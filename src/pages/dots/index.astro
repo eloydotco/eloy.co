@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+import DotFeed from '../../components/DotFeed.astro';
+
+const title = 'dots';
+const description =
+  'My blog with personal recommendations about whatever I found interesting';
+
+const posts = Astro.fetchContent('./data/*.md').sort(
+  (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+);
+---
+
+<Layout {title} {description}>
+  <DotFeed {description} {posts} />
+</Layout>
