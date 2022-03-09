@@ -1,8 +1,5 @@
 # Add files here to ignore them from prettier formatting
-.github
-.lighthouseci
-.vscode
+.**
 
-/coverage
 /dist
 /node_modules

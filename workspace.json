@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "dots": "libs/dots",
-    "common": "libs/common",
-    "home": "libs/home",
-    "website": "apps/website"
-  }
-}
