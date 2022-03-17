@@ -1,11 +1,37 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-import Home from '../components/Home.astro';
 
 const title = 'Home';
 const description = 'My personal website with my projects and blog.';
 ---
 
 <Layout {title} {description}>
-  <Home />
+  <div class="flex w-full flex-col items-center justify-center">
+    <img
+      class="animate-zoom-in-slow h-40 w-40 rounded-full"
+      src="/assets/avatar.png"
+      alt="Eloy Castelo Otero avatar"
+      height="160"
+      width="160"
+    />
+
+    <div
+      class="mt-2 flex max-w-full flex-col items-center px-6 transition-all sm:max-w-2xl sm:px-12 xl:max-w-4xl"
+    >
+      <h1 class="animate-slide-in-left text-center transition-all">Hi! I'm Eloy 👋</h1>
+
+      <p class="animate-slide-in-left mt-2 text-center transition-all">
+        Welcome to my piece of the Internet. This is my place for
+        <span class="text-yellow-400">thoughts</span>,
+        <span class="text-yellow-400">reflections</span> &
+        <span class="text-yellow-400">everything in between</span>.
+      </p>
+
+      <!-- <p
+        class="animate-slide-in-left mt-8 text-center text-lg transition-all sm:text-xl"
+      >
+        TODO: nav to all pages
+      </p> -->
+    </div>
+  </div>
 </Layout>
