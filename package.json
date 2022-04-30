@@ -21,7 +21,7 @@
     "fs-extra": "~10.0.1",
     "postcss": "~8.4.12",
     "prettier-plugin-astro": "~0.0.12",
-    "prettier-plugin-tailwindcss": "~0.1.8",
+    "prettier-plugin-tailwindcss": "~0.1.10",
     "prettier": "~2.6.2",
     "rehype-autolink-headings": "~6.1.1",
     "rehype-external-links": "~1.0.1",
