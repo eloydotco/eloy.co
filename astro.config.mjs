@@ -1,9 +1,7 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
-  buildOptions: {
-    site: 'https://eloy.co',
-  },
-  markdownOptions: {
+  site: 'https://eloy.co',
+  markdown: {
     render: [
       '@astrojs/markdown-remark',
       {

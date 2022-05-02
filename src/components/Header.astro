@@ -1,11 +1,11 @@
 ---
-export interface Props {
-  currentPage: string;
-}
+// export interface Props {
+//   currentPage: string;
+// }
 
-const { currentPage: rawCurrentPage } = Astro.props;
-const currentPage = rawCurrentPage.replace(/[\/\\]+$/, '');
-const highlightDots = currentPage === '/dots';
+// const { currentPage: rawCurrentPage } = Astro.props;
+// const currentPage = rawCurrentPage.replace(/[\/\\]+$/, '');
+// const highlightDots = currentPage === '/dots';
 ---
 
 <nav class="p-4 flex items-center">

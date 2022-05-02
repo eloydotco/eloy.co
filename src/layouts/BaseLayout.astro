@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { title: pageTitle, description } = Astro.props;
-const { canonicalURL } = Astro.request;
+const canonicalURL = Astro.canonicalURL;
 const siteName = canonicalURL.hostname;
 const title = `${pageTitle} | ${siteName}`;
 ---

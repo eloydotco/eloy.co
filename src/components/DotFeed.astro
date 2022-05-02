@@ -18,14 +18,14 @@ const { description, posts } = Astro.props;
 
   <section class="grid justify-center sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-md">
     {posts.map((post) => {
-      const link = `/dots/${post.file.pathname.split('/').pop().split('.').shift()}`;
+      const link = `/dots/${post.file.split('/').pop().split('.').shift()}`;
 
       return (
         <DotPreview
           post={{
-            title: post.title,
-            description: post.description,
-            date: post.date,
+            title: post.frontmatter.title,
+            description: post.frontmatter.description,
+            date: post.frontmatter.date,
             link,
           }}
         />

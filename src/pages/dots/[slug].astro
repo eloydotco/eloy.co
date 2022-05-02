@@ -1,13 +1,13 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
 import DotPost from '../../components/DotPost.astro';
+import Layout from '../../layouts/BaseLayout.astro';
 
-export function getStaticPaths({ rss }) {
-  const posts = Astro.fetchContent('./data/*.md')
+export async function getStaticPaths({ rss }) {
+  const posts = (await Astro.glob('./data/*.md'))
     .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
     .map((post) => ({
       ...post,
-      slug: post.file.pathname.split('/').pop().split('.').shift(),
+      slug: post.file.split('/').pop().split('.').shift(),
     }));
 
   rss({
@@ -15,10 +15,10 @@ export function getStaticPaths({ rss }) {
     stylesheet: true,
     description: 'My blog with personal recommendations about whatever I found interesting',
     items: posts.map((post) => ({
-      title: post.title,
-      description: post.description,
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
       link: `/dots/${post.slug}`,
-      pubDate: post.date,
+      pubDate: post.frontmatter.date,
     })),
   });
 
@@ -28,13 +28,13 @@ export function getStaticPaths({ rss }) {
   }));
 }
 
-const { Content, title, description, date, canonicalUrl } = Astro.props.post;
+const { Content, frontmatter } = Astro.props.post;
 
-const originalUrl = !canonicalUrl?.startsWith(Astro.site.href) ? canonicalUrl : undefined;
+const originalUrl = !frontmatter.canonicalUrl?.startsWith(Astro.site.href) ? frontmatter.canonicalUrl : undefined;
 ---
 
-<Layout {title} {description} {canonicalUrl} {originalUrl}>
-  <DotPost {title} {date} {originalUrl}>
+<Layout {frontmatter.title} {frontmatter.description} {frontmatter.canonicalUrl} {originalUrl}>
+  <DotPost {frontmatter.title} {frontmatter.date} {originalUrl}>
     <Content />
   </DotPost>
 </Layout>
