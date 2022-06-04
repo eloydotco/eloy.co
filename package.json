@@ -12,19 +12,17 @@
     "format:write": "prettier --write ."
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "astro": "^1.0.0-beta.37",
+    "@tailwindcss/typography": "~0.5.2",
+    "astro": "1.0.0-beta.34",
     "autoprefixer": "~10.4.7",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "~8.17.0",
+    "eslint-config-prettier": "~8.5.0",
     "fs-extra": "~10.1.0",
     "postcss": "~8.4.14",
     "prettier": "~2.6.2",
     "prettier-plugin-astro": "~0.0.12",
     "prettier-plugin-tailwindcss": "~0.1.11",
-    "rehype-autolink-headings": "~6.1.1",
-    "rehype-external-links": "~1.0.1",
-    "sass": "~1.52.1",
+    "sass": "~1.52.2",
     "tailwindcss": "~3.0.24"
   }
 }
