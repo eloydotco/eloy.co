@@ -16,8 +16,8 @@ const { title, description, date, link } = Astro.props.post;
   href={link}
 >
   <div class="p-6 flex flex-col flex-1">
-    <h2 class="my-0">{title}</h2>
-    <p class="my-6 flex-1">{description}</p>
-    <span class="self-end text-sm opacity-60">{date}</span>
+    <h2 class="my-0">{title || 'title'}</h2>
+    <p class="my-6 flex-1">{description || 'lorem ipsum bla bla...'}</p>
+    <span class="self-end text-sm opacity-60">{date || '01/01/2000'}</span>
   </div>
 </a>

@@ -1,15 +1,23 @@
 ---
-import DotFeed from '../../components/DotFeed.astro';
+import Dot from '../../components/Dot.astro';
 import Layout from '../../layouts/BaseLayout.astro';
 
 const title = 'dots';
 const description = 'My blog with personal recommendations about whatever I found interesting';
 
-const posts = (await Astro.glob('./data/*.md')).sort(
-  (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
-);
+const dots = []
 ---
 
 <Layout {title} {description}>
-  <DotFeed {description} {posts} />
+  <div
+  class="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-6xl mx-auto p-6 w-full flex flex-col transition-all"
+>
+  <section class="mb-8 w-full flex flex-col">
+    <p class="text-center">{description}</p>
+  </section>
+
+  <section class="grid justify-center sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-md">
+    {dots.map((dot) => <Dot {dot} />)}
+  </section>
+</div>
 </Layout>
