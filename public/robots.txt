@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://eloy.co/sitemap.xml
