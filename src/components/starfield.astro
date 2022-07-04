@@ -1,5 +1,5 @@
-<div id="starfield" class="absolute inset-0">
-  <canvas id="starfield-canvas"></canvas>
+<div id='starfield' class='absolute inset-0'>
+  <canvas id='starfield-canvas'></canvas>
 </div>
 
 <script>
@@ -47,10 +47,10 @@
   const stars = Array.from({ length: COUNT }, () => new Star(0, 0, 0));
   let rafId;
 
-  const canvas = document.querySelector("#starfield-canvas");
-  const ctx = canvas.getContext("2d");
+  const canvas = document.querySelector('#starfield-canvas');
+  const ctx = canvas.getContext('2d');
 
-  const container = document.querySelector("#starfield");
+  const container = document.querySelector('#starfield');
   const resizeObserver = new ResizeObserver(setup);
   resizeObserver.observe(container);
 
@@ -72,8 +72,8 @@
     }
 
     ctx.translate(width / 2, height / 2);
-    ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-    ctx.strokeStyle = "white";
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+    ctx.strokeStyle = 'white';
     rafId = requestAnimationFrame(frame);
   }
 

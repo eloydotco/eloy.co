@@ -1,36 +1,36 @@
 ---
-import { generateImage } from "astro-eleventy-img";
-import Starfield from "./starfield.astro";
+import { generateImage } from 'astro-eleventy-img';
+import Starfield from './starfield.astro';
 
 const widths = [450, 800];
 
-const { webp, avif, png } = generateImage("src/assets/eloy-castelo-profile-image.png", {
+const { webp, avif, png } = generateImage('src/assets/eloy-castelo-profile-image.png', {
   widths,
-  formats: ["webp", "avif", "png"],
-  outputDir: "public/assets/images/eloy-castelo-profile-image",
-  urlPath: "/assets/images/eloy-castelo-profile-image",
+  formats: ['webp', 'avif', 'png'],
+  outputDir: 'public/assets/images/eloy-castelo-profile-image',
+  urlPath: '/assets/images/eloy-castelo-profile-image',
 });
 
-const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
-const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
-const pngSrcset = png.map(({ srcset }) => srcset).join(",");
+const avifSrcset = avif.map(({ srcset }) => srcset).join(',');
+const webpSrcset = webp.map(({ srcset }) => srcset).join(',');
+const pngSrcset = png.map(({ srcset }) => srcset).join(',');
 ---
 
-<section class="relative h-screen bg-black">
+<section class='relative h-screen bg-black'>
   <Starfield />
-  <div class="relative h-full grid grid-cols-1 gap-4 content-center place-items-center">
-    <picture class="flex h-[40vh] pb-8">
-      <source type="image/avif" srcset={avifSrcset} />
-      <source type="image/webp" srcset={webpSrcset} />
-      <source type="image/png" srcset={pngSrcset} />
-      <img class="" src={png[0].url} alt="Eloy Castelo profile image" />
+  <div class='relative h-full grid grid-cols-1 gap-4 content-center place-items-center'>
+    <picture class='flex h-[40vh] pb-8'>
+      <source type='image/avif' srcset={avifSrcset} />
+      <source type='image/webp' srcset={webpSrcset} />
+      <source type='image/png' srcset={pngSrcset} />
+      <img class='' src={png[0].url} alt='Eloy Castelo profile image' />
     </picture>
-    <h2 class="flex text-6xl">
-      <span class="gradient-text">Hi! I'm Eloy</span>
-      <span class="floating">👋</span>
+    <h2 class='flex text-6xl'>
+      <span class='gradient-text'>Hi! I'm Eloy</span>
+      <span class='floating'>👋</span>
     </h2>
-    <h3 id="apprentice" class="flex text-2xl text-center p-4">
-      <span class="sr-only">Apprentice of everything and master of nothing</span>
+    <h3 id='apprentice' class='flex text-2xl text-center p-4'>
+      <span class='sr-only'>Apprentice of everything and master of nothing</span>
     </h3>
   </div>
 </section>
@@ -60,21 +60,21 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 <script>
   import TypeIt from 'typeit';
 
-  document.addEventListener("DOMContentLoaded", () => {
-    new TypeIt("#apprentice", {
+  document.addEventListener('DOMContentLoaded', () => {
+    new TypeIt('#apprentice', {
       speed: 99,
     })
-      .type("Apprentice of stoicism")
+      .type('Apprentice of stoicism')
       .delete(8)
-      .type("veganism", { delay: 1000 })
+      .type('veganism', { delay: 1000 })
       .delete(8)
-      .type("minimalism", { delay: 1000 })
+      .type('minimalism', { delay: 1000 })
       .delete(10)
-      .type("engineering", { delay: 1000 })
+      .type('engineering', { delay: 1000 })
       .delete(11)
-      .type("life", { delay: 500 })
+      .type('life', { delay: 500 })
       .break()
-      .type("and everything else")
+      .type('and everything else')
       .go();
   });
 </script>

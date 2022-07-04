@@ -1,53 +1,53 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon';
 
-const navItems = [
-  { title: "Contact", url: "#contact" }
-];
+const navItems = [{ title: 'Contact', url: '#contact' }];
 ---
 
-<header id="page-header"
-  class="absolute bottom-0 z-10 flex items-center justify-between w-full p-6 text-white border-b border-transparent">
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Eloy Castelo Otero</h1>
-    <Icon name="logo" class="h-8 invert" />
+<header
+  id='page-header'
+  class='absolute bottom-0 z-10 flex items-center justify-between w-full p-6 text-white border-b border-transparent'
+>
+  <a class='flex items-center gap-3 hover:!text-default' href='#'>
+    <h1 class='sr-only'>Eloy Castelo Otero</h1>
+    <Icon name='logo' class='h-8 invert' />
   </a>
-  <div class="flex items-center gap-6">
-    <nav class="hidden sm:block">
-      <ul class="flex items-center gap-6">
+  <div class='flex items-center gap-6'>
+    <nav class='hidden sm:block'>
+      <ul class='flex items-center gap-6'>
         {navItems.map(({ title, url }) => (
-        <li>
-          <a class="text-sm hover:text-amber-400" href={url}>
-            {title}
-          </a>
-        </li>
+          <li>
+            <a class="text-sm hover:text-amber-400" href={url}>
+              {title}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>
-    <button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation">
-      <Icon name="majesticons:menu-alt-line" class="h-10" />
+    <button id='open-nav-button' type='button' class='btn sm:hidden' aria-label='Navigation'>
+      <Icon name='majesticons:menu-alt-line' class='h-10' />
     </button>
-    <div id="nav-menu" class="hidden absolute" aria-hidden="true">
-      <div class="fixed inset-0 p-6 bg-default">
-        <div class="space-y-4" role="dialog" aria-modal="true">
-          <header class="text-right">
-            <button id="close-nav-button" type="button" class="btn" aria-label="Close navigation">
-              <Icon name="majesticons:close-line" class="h-10" />
+    <div id='nav-menu' class='hidden absolute' aria-hidden='true'>
+      <div class='fixed inset-0 p-6 bg-default'>
+        <div class='space-y-4' role='dialog' aria-modal='true'>
+          <header class='text-right'>
+            <button id='close-nav-button' type='button' class='btn' aria-label='Close navigation'>
+              <Icon name='majesticons:close-line' class='h-10' />
             </button>
           </header>
-          <div class="flex justify-center">
-            <a href="#">
-              <Icon name="logo" class="h-16 invert" />
+          <div class='flex justify-center'>
+            <a href='#'>
+              <Icon name='logo' class='h-16 invert' />
             </a>
           </div>
           <nav>
-            <ul class="flex flex-col mt-16">
+            <ul class='flex flex-col mt-16'>
               {navItems.map(({ title, url }) => (
-              <li>
-                <a class="block py-4 text-xl text-center" href={url}>
-                  {title}
-                </a>
-              </li>
+                <li>
+                  <a class="block py-4 text-center text-xl" href={url}>
+                    {title}
+                  </a>
+                </li>
               ))}
             </ul>
           </nav>
@@ -58,14 +58,14 @@ const navItems = [
 </header>
 
 <script>
-  const header = document.querySelector("#page-header");
-  const openNav = document.querySelector("#open-nav-button");
-  const navMenu = document.querySelector("#nav-menu");
+  const header = document.querySelector('#page-header');
+  const openNav = document.querySelector('#open-nav-button');
+  const navMenu = document.querySelector('#nav-menu');
   const page = document.documentElement;
 
-  openNav.addEventListener("click", toggleNavMenu);
-  navMenu.addEventListener("click", toggleNavMenu);
-  document.addEventListener("scroll", updateHeader);
+  openNav.addEventListener('click', toggleNavMenu);
+  navMenu.addEventListener('click', toggleNavMenu);
+  document.addEventListener('scroll', updateHeader);
   updateHeader();
 
   function updateHeader() {
@@ -81,6 +81,6 @@ const navItems = [
 <style>
   .fixed-header {
     @apply fixed top-0 bottom-auto;
-    @apply text-default bg-default border-default;
+    @apply border-default bg-default text-default;
   }
 </style>

@@ -1,18 +1,21 @@
 ---
-import Layout from '..//layouts/BaseLayout.astro';
+import ContentSection from "../components/content-section.astro";
+import Layout from '../layouts/BaseLayout.astro';
 
 const title = 'Page not found';
-const description = 'My personal website with my projects and blog.';
 ---
 
-<Layout {title} {description}>
-  <div
-    class="p-4 sm:p-16 flex flex-col w-full items-center justify-center text-center transition-all">
-    <h2 class="text-2xl sm:text-4xl transition-all">It looks like you're lost.</h2>
-    <p class="mt-8 sm:text-lg transition-all">The page you're looking for doesn't exist.</p>
-    <a class="mt-12 sm:mt-16 p-2 border-2 hover:border-amber-400 hover:text-amber-400 transition-all"
-      href="/">
-      Go back home
-    </a>
-  </div>
+<Layout {title}>
+  <ContentSection title="Page not found" id="contact">
+    <Fragment slot="lead">
+      <span class="text-primary">It looks like you're lost.</span><br />
+      The page you're looking for doesn't exist.
+    </Fragment>
+    <div class="grid grid-cols-1">
+      <a class="flex items-center justify-center gap-3 p-4 rounded-md border-2 border-current hover:text-amber-400"
+        href="/" aria-label="Return to home page">
+        Go back home
+      </a>
+    </div>
+  </ContentSection>
 </Layout>
