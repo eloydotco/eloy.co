@@ -1,25 +1,86 @@
 ---
-// export interface Props {
-//   currentPage: string;
-// }
+import { Icon } from "astro-icon";
 
-// const { currentPage: rawCurrentPage } = Astro.props;
-// const currentPage = rawCurrentPage.replace(/[\/\\]+$/, '');
-// const highlightDots = currentPage === '/dots';
+const navItems = [
+  { title: "Contact", url: "#contact" }
+];
 ---
 
-<nav class="p-4 flex items-center">
-  <a class="not-prose flex p-2 items-center transition-all hover:text-yellow-400" href="/">
-    <img class="svg-icon" src="/assets/logo.svg" height="70" width="70" alt="eloy.co logo" />
+<header id="page-header"
+  class="absolute bottom-0 z-10 flex items-center justify-between w-full p-6 text-white border-b border-transparent">
+  <a class="flex items-center gap-3 hover:!text-default" href="#">
+    <h1 class="sr-only">Eloy Castelo Otero</h1>
+    <Icon name="logo" class="h-8 invert" />
   </a>
-  <!-- TODO: uncomments on first dot -->
-  <!-- <div class="flex flex-1 justify-end items-center">
-    <a
-      class={`flex items-center hover:text-cyyellowan-400 transition-all ${
-        highlightDots ? 'underline underline-offset-2 text-yellow-400' : ''
-      }`}
-      href="/dots"
-      >Dots
-    </a>
-  </div> -->
-</nav>
+  <div class="flex items-center gap-6">
+    <nav class="hidden sm:block">
+      <ul class="flex items-center gap-6">
+        {navItems.map(({ title, url }) => (
+        <li>
+          <a class="text-sm hover:text-amber-400" href={url}>
+            {title}
+          </a>
+        </li>
+        ))}
+      </ul>
+    </nav>
+    <button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation">
+      <Icon name="majesticons:menu-alt-line" class="h-10" />
+    </button>
+    <div id="nav-menu" class="hidden absolute" aria-hidden="true">
+      <div class="fixed inset-0 p-6 bg-default">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button id="close-nav-button" type="button" class="btn" aria-label="Close navigation">
+              <Icon name="majesticons:close-line" class="h-10" />
+            </button>
+          </header>
+          <div class="flex justify-center">
+            <a href="#">
+              <Icon name="logo" class="h-16 invert" />
+            </a>
+          </div>
+          <nav>
+            <ul class="flex flex-col mt-16">
+              {navItems.map(({ title, url }) => (
+              <li>
+                <a class="block py-4 text-xl text-center" href={url}>
+                  {title}
+                </a>
+              </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector("#page-header");
+  const openNav = document.querySelector("#open-nav-button");
+  const navMenu = document.querySelector("#nav-menu");
+  const page = document.documentElement;
+
+  openNav.addEventListener("click", toggleNavMenu);
+  navMenu.addEventListener("click", toggleNavMenu);
+  document.addEventListener("scroll", updateHeader);
+  updateHeader();
+
+  function updateHeader() {
+    const d = page.clientHeight - page.scrollTop - header?.offsetHeight;
+    header?.classList.toggle('fixed-header', d < 0);
+  }
+
+  function toggleNavMenu() {
+    navMenu.classList.toggle('hidden');
+  }
+</script>
+
+<style>
+  .fixed-header {
+    @apply fixed top-0 bottom-auto;
+    @apply text-default bg-default border-default;
+  }
+</style>

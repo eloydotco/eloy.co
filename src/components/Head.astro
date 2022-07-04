@@ -35,10 +35,8 @@ const canonicalImageSrc = new URL(socialImage, Astro.site);
 <meta name="title" content={title} />
 <meta name="author" content="Eloy Castelo Otero" />
 <meta name="description" content={description} />
-<meta
-  name="keywords"
-  content="Eloy, Eloy Castelo, Eloy Castelo Otero, eloy.co, Software Engineer, Frontend, Web Development"
-/>
+<meta name="keywords"
+  content="Eloy, Eloy Castelo, Eloy Castelo Otero, eloy.co, Software Engineer, Frontend, Web Development" />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- OpenGraph Tags -->
@@ -65,3 +63,18 @@ const canonicalImageSrc = new URL(socialImage, Astro.site);
 <style set:html={styles}>
 
 </style>
+
+<!-- <script is:inline>
+  const prefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      document.documentElement.dataset.theme = event.matches
+        ? "dark"
+        : "light";
+    });
+</script> -->

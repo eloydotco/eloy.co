@@ -1,39 +1,31 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      keyframes: {
-        'slide-in-left': {
-          '0%': {
-            transform: 'translateX(-100px)',
-            opacity: 0.5,
-          },
-          '100%': {
-            transform: 'translateX(0)',
-            opacity: 1,
-          },
-        },
-        'zoom-in': {
-          '0%': {
-            opacity: 0.5,
-            transform: 'scale(0.7)',
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'scale(1)',
-          },
-        },
+      fontFamily: {
+        sans: ['Comfortaa', ...defaultTheme.fontFamily.sans],
       },
-      animation: {
-        'slide-in-left': 'slide-in-left 300ms ease-in-out',
-        'zoom-in': 'zoom-in 200ms ease-in-out',
-        'zoom-in-slow': 'zoom-in 300ms ease-in-out',
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       },
-      listStyleType: {
-        circle: 'circle',
-        square: 'square',
+      textColor: {
+        default: 'var(--color-text)',
+        offset: 'var(--color-text-offset)',
+      },
+      backgroundColor: {
+        default: 'var(--color-background)',
+        offset: 'var(--color-background-offset)',
+      },
+      borderColor: {
+        default: 'var(--color-border)',
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  corePlugins: {
+    fontSize: false,
+  },
+  plugins: [require('tailwindcss-fluid-type')],
 };
