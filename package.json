@@ -15,7 +15,7 @@
     "@tailwindcss/typography": "~0.5.2",
     "astro": "1.0.0-beta.34",
     "autoprefixer": "~10.4.7",
-    "eslint": "~8.17.0",
+    "eslint": "~8.19.0",
     "eslint-config-prettier": "~8.5.0",
     "fs-extra": "~10.1.0",
     "postcss": "~8.4.14",
