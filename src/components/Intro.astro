@@ -17,7 +17,7 @@ const socialLinks = [
     <span class="text-primary">everything in between</span>.
     While I build it, you can <span class="text-primary">reach me</span> at:
   </Fragment>
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     {socialLinks.map(({name, href, icon, label}) => (
     <a class="flex items-center justify-center gap-4 p-4 rounded-md border-2 border-current hover:text-amber-400"
       {href} rel="noopener" target="_blank" aria-label={label}>

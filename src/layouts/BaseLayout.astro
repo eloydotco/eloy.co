@@ -25,7 +25,7 @@ const title = `${pageTitle} | ${siteName}`;
   class='h-full overflow-x-hidden text-base bg-default text-default selection:bg-primary selection:text-[color:var(--color-text)]'>
   <Header currentPage={Astro.request.url.pathname} />
   <Splash />
-  <main class='px-8 py-32 space-y-24'>
+  <main class='px-8 py-32 min-h-screen'>
     <slot></slot>
   </main>
 
