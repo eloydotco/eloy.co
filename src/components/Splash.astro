@@ -23,7 +23,8 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(',');
       <source type='image/avif' srcset={avifSrcset} />
       <source type='image/webp' srcset={webpSrcset} />
       <source type='image/png' srcset={pngSrcset} />
-      <img class='' src={png[0].url} alt='Eloy Castelo profile image' />
+      <img class='' src={png[0].url} alt='Eloy Castelo profile image' height={png[0].height}
+        width={png[0].width} />
     </picture>
     <h2 class='flex text-6xl'>
       <span class='gradient-text'>Hi! I'm Eloy</span>
