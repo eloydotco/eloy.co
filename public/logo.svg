@@ -1,0 +1,92 @@
+<svg
+  id="screenshot"
+  viewBox="-9.056231483566919e-7 -5.3332905744658525e-8 875.0000018112462 350.0000001066658"
+  width="875.0000018112462"
+  height="350.0000001066658"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    x="0"
+    y="0"
+    width="875"
+    height="350"
+    class="frame-background"
+    style="fill: rgb(255, 255, 255); fill-opacity: 0"
+  />
+  <g id="shape-22677c50-b313-11eb-a66f-93a526960af6">
+    <clipPath id="clip-3d9e2380-b5c9-11eb-a360-9d8a042cfb8a">
+      <ellipse cx="700" cy="175" rx="175" ry="175" style="fill: white; fill-opacity: 1" />
+    </clipPath>
+    <ellipse
+      cx="700"
+      cy="175"
+      rx="175"
+      ry="175"
+      transform="matrix(1.0000000000000002,0,0,1,-1.1368683772161603e-13,0)"
+      clip-path="url('#clip-3d9e2380-b5c9-11eb-a360-9d8a042cfb8a')"
+      style="fill: transparent; stroke-width: 100; stroke: rgb(12, 12, 12); stroke-opacity: 1"
+    />
+  </g>
+  <g id="shape-fc21f840-b312-11eb-a66f-93a526960af6">
+    <rect
+      rx="20"
+      ry="20"
+      x="312.9999263089693"
+      y="245.00007364632484"
+      transform="matrix(0.7071063337662177,0.7071070518307685,-0.7071055232082117,0.7071055501540131,312.2719379938404,-213.11453258276737)"
+      width="200"
+      height="50"
+      style="fill: rgb(12, 12, 12); fill-opacity: 1"
+    />
+  </g>
+  <g id="shape-8bbe7470-b312-11eb-a66f-93a526960af6">
+    <rect
+      rx="20"
+      ry="20"
+      x="313"
+      y="55.786723781123385"
+      transform="matrix(0.7071071514270497,-0.7071064109465851,0.7071067811867995,0.707106781186825,64.23538179477686,315.85476801359664)"
+      width="200"
+      height="50"
+      style="fill: rgb(12, 12, 12); fill-opacity: 1"
+    />
+  </g>
+  <g id="shape-69c54010-b312-11eb-a66f-93a526960af6">
+    <rect
+      rx="20"
+      ry="20"
+      x="0"
+      y="300"
+      transform="matrix(1,0,0,1,0,0)"
+      width="300"
+      height="50"
+      style="fill: rgb(12, 12, 12); fill-opacity: 1"
+    />
+  </g>
+  <g id="shape-696f09c0-b312-11eb-a66f-93a526960af6">
+    <rect
+      rx="20"
+      ry="20"
+      x="50"
+      y="150"
+      transform="matrix(1,0,0,1,0,0)"
+      width="200"
+      height="50"
+      style="fill: rgb(12, 12, 12); fill-opacity: 1"
+    />
+  </g>
+  <g id="shape-421b22f0-b312-11eb-a66f-93a526960af6">
+    <rect
+      rx="20"
+      ry="20"
+      x="0"
+      y="8.881784197001252e-16"
+      transform="matrix(1,0,0,1,0,0)"
+      width="300"
+      height="50"
+      style="fill: rgb(12, 12, 12); fill-opacity: 1"
+    />
+  </g>
+</svg>

@@ -7,8 +7,8 @@ const widths = [450, 800];
 const { webp, avif, png } = generateImage('src/assets/eloy-castelo-profile-image.png', {
   widths,
   formats: ['webp', 'avif', 'png'],
-  outputDir: 'dist/assets/eloy-castelo-profile-image',
-  urlPath: '/assets/images/eloy-castelo-profile-image',
+  outputDir: 'dist/assets/images/profile',
+  urlPath: '/assets/images/profile',
 });
 
 const avifSrcset = avif.map(({ srcset }) => srcset).join(',');
@@ -64,7 +64,7 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(',');
     new TypeIt('#apprentice', {
       speed: 99,
     })
-      .type('Apprentice of stoicism')
+      .type('Apprentice of stoicism', { delay: 1000 })
       .delete(8)
       .type('veganism', { delay: 1000 })
       .delete(8)
