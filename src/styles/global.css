@@ -1,9 +1,31 @@
-@import url('https://fonts.cdnfonts.com/css/comfortaa');
+@import '@picocss/pico/css/pico.min.css';
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Comfortaa'), url('https://fonts.cdnfonts.com/s/90/Comfortaa_Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 250;
+  src: local('Comfortaa'), url('https://fonts.cdnfonts.com/s/90/Comfortaa_Thin.woff') format('woff');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Comfortaa'), url('https://fonts.cdnfonts.com/s/90/Comfortaa_Bold.woff') format('woff');
+}
+
+
 
 html,
 body {
   font-family: 'Comfortaa', sans-serif;
 
+  --primary: theme('colors.amber.400');
   --color-primary: theme('colors.amber.400');
   --color-secondary: theme('colors.sky.200');
   --color-text: theme('colors.gray.50');
@@ -13,10 +35,6 @@ body {
   --color-border: rgb(249 250 251/0.1);
 }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-600;
-}
 
 :focus {
   outline: 2px solid var(--color-primary);

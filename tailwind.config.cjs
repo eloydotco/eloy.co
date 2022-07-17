@@ -1,11 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Comfortaa', ...defaultTheme.fontFamily.sans],
+        sans: ['Comfortaa', ...fontFamily.sans],
       },
       colors: {
         primary: 'var(--color-primary)',
@@ -24,8 +24,5 @@ module.exports = {
       },
     },
   },
-  corePlugins: {
-    fontSize: false,
-  },
-  plugins: [require('tailwindcss-fluid-type')],
+  plugins: [require('@tailwindcss/typography')],
 };

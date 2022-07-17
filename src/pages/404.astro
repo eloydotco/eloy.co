@@ -1,21 +1,23 @@
 ---
-import ContentSection from "../components/ContentSection.astro";
 import Layout from '../layouts/BaseLayout.astro';
 
-const title = 'Page not found';
+const title = "Page not found!";
 ---
 
 <Layout {title}>
-  <ContentSection title="Page not found" id="contact">
-    <Fragment slot="lead">
-      <span class="text-primary">It looks like you're lost.</span><br />
-      The page you're looking for doesn't exist.
-    </Fragment>
-    <div class="grid grid-cols-1">
-      <a class="flex items-center justify-center gap-3 p-4 rounded-md border-2 border-current hover:text-amber-400"
-        href="/" aria-label="Return to home page">
-        Go back home
-      </a>
+  <header>
+    <div class="container">
+      <h1>{title}</h1>
+      <p>
+        It looks like you're lost.
+        The page you're looking for doesn't exist.
+      </p>
+      <p>
+        <a class="outline hover:text-amber-400" role="button" href="/"
+          aria-label="Return to home page">
+          Go back home
+        </a>
+      </p>
     </div>
-  </ContentSection>
+  </header>
 </Layout>

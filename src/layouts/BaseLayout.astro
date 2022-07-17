@@ -1,7 +1,6 @@
 ---
 import Head from '../components/Head.astro';
-import Header from '../components/Header.astro';
-import Splash from '../components/Splash.astro';
+import Toolbar from '../components/Toolbar.astro';
 
 export interface Props {
   title: string;
@@ -21,11 +20,10 @@ const title = `${pageTitle} | ${siteName}`;
   <Head {title} {description} {canonicalURL} {siteName} />
 </head>
 
-<body
-  class='h-full overflow-x-hidden text-base bg-default text-default selection:bg-primary selection:text-[color:var(--color-text)]'>
-  <Header currentPage={Astro.request.url.pathname} />
-  <Splash />
-  <main class='px-8 py-32 min-h-screen'>
+<body>
+  <Toolbar currentPage={Astro.request.url.pathname} />
+
+  <main class='max-w-[65ch]'>
     <slot></slot>
   </main>
 

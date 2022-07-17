@@ -1,0 +1,22 @@
+---
+import { Icon } from 'astro-icon';
+
+const navItems = [];
+---
+
+<nav class="container-fluid">
+  <ul>
+    <li class="p-2 bg-white">
+      <Icon name='logo' class='h-8' />
+    </li>
+  </ul>
+  <ul>
+    {navItems.map(({ title, url }) => (
+    <li>
+      <a class="secondary" href={url}>
+        {title}
+      </a>
+    </li>
+    ))}
+  </ul>
+</nav>
