@@ -1,6 +1,6 @@
 # README
 
-This is my personal website, hosted at eloy.co and built with Astro & Tailwind.
+This is my personal website, hosted at eloy.co and built with Astro.
 
 ## WIP
 

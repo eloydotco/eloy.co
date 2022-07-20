@@ -21,9 +21,9 @@ const title = `${pageTitle} | ${siteName}`;
 </head>
 
 <body>
-  <Toolbar currentPage={Astro.request.url.pathname} />
+  <Toolbar />
 
-  <main class='max-w-[65ch]'>
+  <main class="container">
     <slot></slot>
   </main>
 

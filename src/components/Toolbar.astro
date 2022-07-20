@@ -6,8 +6,10 @@ const navItems = [];
 
 <nav class="container-fluid">
   <ul>
-    <li class="p-2 bg-white">
-      <Icon name='logo' class='h-8' />
+    <li class="logo-link">
+      <a href="https://eloy.co">
+        <Icon name='logo' />
+      </a>
     </li>
   </ul>
   <ul>
@@ -20,3 +22,11 @@ const navItems = [];
     ))}
   </ul>
 </nav>
+
+<style>
+  .logo-link a [astro-icon=logo] {
+    height: 3.5rem;
+    width: 5rem;
+    padding: 0 0.5rem;
+  }
+</style>

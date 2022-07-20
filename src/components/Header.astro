@@ -3,30 +3,58 @@ import { Icon } from "astro-icon";
 
 const socialLinks = [
   { name: 'hi@eloy.co', href: 'mailto:hi@eloy.co', icon: 'ci:mail', label: 'Email addres link' },
-  { name: 'eloy-castelo', href: 'https://linkedin.com/in/eloy-castelo/', icon: 'ri:linkedin-line', label: 'LinkedIn account link' },
+  { name: 'eloy-castelo', href: 'https://linkedin.com/in/eloy-castelo/', icon: 'ph:linkedin-logo', label: 'LinkedIn account link' },
   { name: 'eloydotco', href: 'https://github.com/eloydotco', icon: 'ri:github-line', label: 'Github acount link' },
   { name: '@eloydotco', href: 'https://twitter.com/eloydotco', icon: 'ri:twitter-line', label: 'Twitter account link' }
 ];
 ---
 
-<section class="text-center px-4">
-  <h1 class="font-bold text-4xl">Hi! I'm Eloy 👋</h1>
-  <p class="py-8">
-    Welcome to my corner of the Internet. This will be my place for thoughts, reflections &
-    everything in between.<br />
-    While I build it, you can reach me at:
-  </p>
-  <nav class="not-prose justify-center">
-    <ul class="grid grid-cols-1 sm:grid-cols-2">
-      {socialLinks.map(({name, href, icon, label}) => (
-      <li>
-        <a class="flex outline hover:text-amber-400 items-center justify-center text-lg"
-          role="button" {href} rel="noopener" target="_blank" aria-label={label}>
-          <Icon name={icon} class="h-6 mr-2" />
-          {name}
-        </a>
-      </li>
-      ))}
-    </ul>
-  </nav>
-</section>
+<header>
+  <div class="container">
+    <h1>Hi! I'm Eloy 👋</h1>
+    <p>
+      Welcome to my corner of the Internet. This will be my place for thoughts, reflections &
+      everything in between.<br />
+      While I build it, you can reach me at:
+    </p>
+    <nav class="social-nav">
+      <ul class="grid">
+        {socialLinks.map(({name, href, icon, label}) => (
+        <li>
+          <a class="social-link contrast outline" {href} role="button" rel="noopener"
+            target="_blank" aria-label={label}>
+            <Icon name={icon} />
+            {name}
+          </a>
+        </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 767px) {
+    .social-nav .grid {
+      width: 100%;
+    }
+  }
+
+  .social-nav {
+    justify-content: center;
+    margin: 2rem auto;
+  }
+
+  .social-link {
+    --border-radius: 0.5rem;
+    --border-width: 2px;
+    line-height: 2;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  [astro-icon] {
+    height: 2rem;
+    vertical-align: middle;
+  }
+</style>
