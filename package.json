@@ -12,17 +12,17 @@
     "format:write": "prettier --write ."
   },
   "devDependencies": {
-    "@astrojs/sitemap": "~0.2.6",
+    "@astrojs/sitemap": "~0.3.0",
     "@picocss/pico": "~1.5.3",
     "astro-icon": "~0.7.3",
-    "astro": "~1.0.0-beta.73",
+    "astro": "~1.0.0-rc.2",
     "autoprefixer": "~10.4.7",
     "cssnano": "~5.1.12",
     "eslint-config-prettier": "~8.5.0",
     "eslint": "~8.20.0",
     "fs-extra": "~10.1.0",
     "postcss": "~8.4.14",
-    "prettier-plugin-astro": "~0.1.1",
+    "prettier-plugin-astro": "~0.1.2",
     "prettier": "~2.7.1"
   }
 }
