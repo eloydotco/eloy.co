@@ -9,52 +9,54 @@ export interface Props {
 }
 
 const {
-  canonicalURL,
   description,
   title,
   siteName,
   socialImage = 'logo.svg',
   socialImageAlt = `eloy.co logo`,
 } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const canonicalImageSrc = new URL(socialImage, Astro.site);
 ---
 
 <!-- Global Metadata -->
-<meta charset='utf-8' />
-<meta name='viewport' content='width=device-width,initial-scale=1' />
-<meta name='theme-color' content='#fbbf24' />
-<link rel='icon' type='image/x-icon' href='/favicon.ico' />
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.cdnfonts.com">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#fbbf24" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.cdnfonts.com" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name='title' content={title} />
-<meta name='author' content='Eloy Castelo Otero' />
-<meta name='description' content={description} />
-<meta name='keywords'
-  content='Eloy, Eloy Castelo, Eloy Castelo Otero, eloy.co, Software Engineer, Frontend, Web Development' />
-<link rel='canonical' href={canonicalURL} />
-<meta name="application-name" content="eloy.co">
+<meta name="title" content={title} />
+<meta name="author" content="Eloy Castelo Otero" />
+<meta name="description" content={description} />
+<meta
+  name="keywords"
+  content="Eloy, Eloy Castelo, Eloy Castelo Otero, eloy.co, Software Engineer, Frontend, Web Development"
+/>
+<link rel="canonical" href={canonicalURL} />
+<meta name="application-name" content="eloy.co" />
 
 <!-- OpenGraph Tags -->
-<meta property='og:type' content='website' />
-<meta property='og:title' content={title} />
-<meta property='og:description' content={description} />
-<meta property='og:url' content={canonicalURL} />
-<meta property='og:site_name' content={siteName} />
-<meta property='og:locale' content='en_US' />
-<meta property='og:image' content={canonicalImageSrc} />
-<meta property='og:image:alt' content={socialImageAlt} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={canonicalImageSrc} />
+<meta property="og:image:alt" content={socialImageAlt} />
 
 <!-- Twitter Tags -->
-<meta name='twitter:card' content='summary_large_image' />
-<meta name='twitter:site' content='@eloydotco' />
-<meta name='twitter:creator' content='@eloydotco' />
-<meta name='twitter:title' content={title} />
-<meta name='twitter:description' content={description} />
-<meta name='twitter:image' content={canonicalImageSrc} />
-<meta name='twitter:image:alt' content={socialImageAlt} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@eloydotco" />
+<meta name="twitter:creator" content="@eloydotco" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={canonicalImageSrc} />
+<meta name="twitter:image:alt" content={socialImageAlt} />
 
 <!-- Analytics Script -->
 <script defer data-domain="eloy.co" src="https://plausible.io/js/plausible.js"></script>

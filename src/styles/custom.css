@@ -33,7 +33,7 @@
 html {
   scroll-behavior: smooth;
 }
-.switcher {
+/* .switcher {
   position: fixed;
   right: calc(var(--spacing) / 2 + var(--scrollbar-width, 0px));
   bottom: var(--spacing);
@@ -86,7 +86,7 @@ html {
   .switcher {
     right: calc(var(--spacing) + var(--scrollbar-width, 0px));
   }
-}
+} */
 :root:not([data-theme='dark']),
 [data-theme='light'] {
   --demo-background: linear-gradient(
@@ -252,7 +252,7 @@ main > section {
 header {
   padding-bottom: 0;
 }
-#demo {
+/* #demo {
   display: flex;
   align-items: center;
 }
@@ -266,7 +266,7 @@ header {
 #star {
   padding: calc(var(--block-spacing-vertical) / 2) 0;
   text-align: center;
-}
+} */
 body > nav {
   --nav-link-spacing-vertical: 1rem;
   box-shadow: 0 1px 0 var(--nav-border-color);
@@ -353,7 +353,7 @@ article > pre {
   margin-bottom: calc(var(--block-spacing-vertical) * -1);
   border-top: var(--border-width) solid var(--card-border-color);
 }
-#demo {
+/* #demo {
   height: var(--demo-height);
   background: var(--demo-background);
 }
@@ -548,6 +548,7 @@ textarea.active {
 #principles p {
   --color: var(--muted-color);
 }
+*/
 .grid {
   grid-gap: 1rem;
   display: grid;
@@ -566,6 +567,7 @@ textarea.active {
   text-transform: uppercase;
   font-weight: 500;
 }
+/*
 .example {
   position: relative;
   width: 100%;
@@ -757,7 +759,7 @@ body > footer ul:first-of-type a {
   body > footer ul:last-of-type li::before {
     display: none;
   }
-}
+} */
 
 header {
   padding-bottom: var(--block-spacing-vertical);

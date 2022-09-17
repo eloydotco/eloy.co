@@ -1,11 +1,26 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon';
 
 const socialLinks = [
   { name: 'hi@eloy.co', href: 'mailto:hi@eloy.co', icon: 'ci:mail', label: 'Email addres link' },
-  { name: 'eloy-castelo', href: 'https://linkedin.com/in/eloy-castelo/', icon: 'ph:linkedin-logo', label: 'LinkedIn account link' },
-  { name: 'eloydotco', href: 'https://github.com/eloydotco', icon: 'ri:github-line', label: 'Github acount link' },
-  { name: '@eloydotco', href: 'https://twitter.com/eloydotco', icon: 'ri:twitter-line', label: 'Twitter account link' }
+  {
+    name: 'eloy-castelo',
+    href: 'https://linkedin.com/in/eloy-castelo/',
+    icon: 'ph:linkedin-logo',
+    label: 'LinkedIn account link',
+  },
+  {
+    name: 'eloydotco',
+    href: 'https://github.com/eloydotco',
+    icon: 'ri:github-line',
+    label: 'Github acount link',
+  },
+  {
+    name: '@eloydotco',
+    href: 'https://twitter.com/eloydotco',
+    icon: 'ri:twitter-line',
+    label: 'Twitter account link',
+  },
 ];
 ---
 
@@ -19,15 +34,23 @@ const socialLinks = [
     </p>
     <nav class="social-nav">
       <ul class="grid">
-        {socialLinks.map(({name, href, icon, label}) => (
-        <li>
-          <a class="social-link contrast outline" {href} role="button" rel="noopener"
-            target="_blank" aria-label={label}>
-            <Icon name={icon} />
-            {name}
-          </a>
-        </li>
-        ))}
+        {
+          socialLinks.map(({ name, href, icon, label }) => (
+            <li class="grid-item">
+              <a
+                class="social-link contrast outline"
+                {href}
+                role="button"
+                rel="noopener"
+                target="_blank"
+                aria-label={label}
+              >
+                <Icon name={icon} />
+                {name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>
@@ -38,6 +61,10 @@ const socialLinks = [
     .social-nav .grid {
       width: 100%;
     }
+  }
+
+  .grid .grid-item {
+    min-width: 10rem;
   }
 
   .social-nav {

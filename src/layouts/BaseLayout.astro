@@ -8,26 +8,23 @@ export interface Props {
 }
 
 const { title: pageTitle, description = 'My piece of the Internet' } = Astro.props;
-const canonicalURL = Astro.canonicalURL;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteName = canonicalURL.hostname;
 const title = `${pageTitle} | ${siteName}`;
 ---
 
-<html lang='en' class='scroll-smooth'>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <Head {title} {description} {canonicalURL} {siteName} />
+  </head>
 
-<head>
+  <body>
+    <Toolbar />
 
-  <Head {title} {description} {canonicalURL} {siteName} />
-</head>
+    <main class="container">
+      <slot />
+    </main>
 
-<body>
-  <Toolbar />
-
-  <main class="container">
-    <slot></slot>
-  </main>
-
-  <!-- <Footer /> -->
-</body>
-
+    <!-- <Footer /> -->
+  </body>
 </html>
