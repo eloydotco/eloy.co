@@ -22,7 +22,7 @@
     "eslint": "8.24.x",
     "fs-extra": "10.1.x",
     "postcss": "8.4.x",
-    "prettier-plugin-astro": "0.5.x",
+    "prettier-plugin-astro": "0.6.x",
     "prettier": "2.7.x"
   }
 }
