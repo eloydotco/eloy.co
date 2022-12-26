@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "1.0.x",
     "@picocss/pico": "1.5.x",
     "astro-icon": "0.7.x",
-    "astro": "1.4.x",
+    "astro": "1.7.x",
     "autoprefixer": "10.4.x",
     "cssnano": "5.1.x",
     "eslint-config-prettier": "8.5.x",
