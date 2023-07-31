@@ -23,6 +23,6 @@
     "fs-extra": "10.1.x",
     "postcss": "8.4.x",
     "prettier-plugin-astro": "0.8.x",
-    "prettier": "2.7.x"
+    "prettier": "3.0.x"
   }
 }
